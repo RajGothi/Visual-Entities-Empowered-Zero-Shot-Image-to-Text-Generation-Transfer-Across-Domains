@@ -58,8 +58,15 @@ To run the model on single image, you can use [Notebook](Code/Notebook/inference
 - Cross-Domain
 ```bash
 bash eval_nocaps.sh coco_train_1 0 '--top_k 3 --threshold 0.2' 14
+bash eval_flickr30k.sh coco_train_1 0 '--top_k 3 --threshold 0.2' 14
+bash eval_coco.sh flicker30K_1 0 '--top_k 3 --threshold 0.2 --using_greedy_search' 29
 ```
 
+- In-Domain
+```bash
+bash eval_coco.sh coco_train_1 0 '' 14
+bash eval_flickr30k.sh flicker30K_1 0 '' 29
+```
 
 
 
