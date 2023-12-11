@@ -1,0 +1,23 @@
+usage: validation.py [-h] [--device DEVICE] [--clip_model CLIP_MODEL]
+                     [--language_model LANGUAGE_MODEL]
+                     [--continuous_prompt_length CONTINUOUS_PROMPT_LENGTH]
+                     [--clip_project_length CLIP_PROJECT_LENGTH]
+                     [--temperature TEMPERATURE] [--top_k TOP_K]
+                     [--threshold THRESHOLD] [--using_image_features]
+                     [--name_of_datasets {coco,flickr30k,nocaps}]
+                     [--path_of_val_datasets PATH_OF_VAL_DATASETS]
+                     [--disable_all_entities]
+                     [--name_of_entities_text {visual_genome_entities,coco_entities,open_image_entities,vinvl_vg_entities,vinvl_vgoi_entities}]
+                     [--prompt_ensemble] [--weight_path WEIGHT_PATH]
+                     [--image_folder IMAGE_FOLDER] [--out_path OUT_PATH]
+                     [--using_hard_prompt] [--soft_prompt_first]
+                     [--only_hard_prompt] [--using_greedy_search]
+                     [--beam_width BEAM_WIDTH] [--debug]
+                     [--text_prompt TEXT_PROMPT]
+validation.py: error: unrecognized arguments: 14
+Traceback (most recent call last):
+  File "/raid/speech/rajgothi/Project/Transformer/Project/evaluation/cocoeval.py", line 15, in <module>
+    cocoEval = COCOEvalCap(args.result_file_path)
+  File "/raid/speech/rajgothi/Project/Transformer/Project/evaluation/pycocoevalcap/eval.py", line 17, in __init__
+    data = json.load(open(path))
+FileNotFoundError: [Errno 2] No such file or directory: 'checkpoints/coco_train_1_mask_0/coco*.json'

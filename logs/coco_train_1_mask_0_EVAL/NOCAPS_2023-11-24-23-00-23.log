@@ -1,0 +1,25 @@
+python: can't open file '/raid/speech/rajgothi/Project/Transformer/Project/validation.py': [Errno 2] No such file or directory
+Traceback (most recent call last):
+  File "/raid/speech/rajgothi/Project/Transformer/Project/evaluation/cocoeval.py", line 15, in <module>
+    cocoEval = COCOEvalCap(args.result_file_path)
+  File "/raid/speech/rajgothi/Project/Transformer/Project/evaluation/pycocoevalcap/eval.py", line 17, in __init__
+    data = json.load(open(path))
+FileNotFoundError: [Errno 2] No such file or directory: 'checkpoints/coco_train_1_mask_0/indomain*.json'
+Traceback (most recent call last):
+  File "/raid/speech/rajgothi/Project/Transformer/Project/evaluation/cocoeval.py", line 15, in <module>
+    cocoEval = COCOEvalCap(args.result_file_path)
+  File "/raid/speech/rajgothi/Project/Transformer/Project/evaluation/pycocoevalcap/eval.py", line 17, in __init__
+    data = json.load(open(path))
+FileNotFoundError: [Errno 2] No such file or directory: 'checkpoints/coco_train_1_mask_0/neardomain*.json'
+Traceback (most recent call last):
+  File "/raid/speech/rajgothi/Project/Transformer/Project/evaluation/cocoeval.py", line 15, in <module>
+    cocoEval = COCOEvalCap(args.result_file_path)
+  File "/raid/speech/rajgothi/Project/Transformer/Project/evaluation/pycocoevalcap/eval.py", line 17, in __init__
+    data = json.load(open(path))
+FileNotFoundError: [Errno 2] No such file or directory: 'checkpoints/coco_train_1_mask_0/outdomain*.json'
+Traceback (most recent call last):
+  File "/raid/speech/rajgothi/Project/Transformer/Project/evaluation/cocoeval.py", line 15, in <module>
+    cocoEval = COCOEvalCap(args.result_file_path)
+  File "/raid/speech/rajgothi/Project/Transformer/Project/evaluation/pycocoevalcap/eval.py", line 17, in __init__
+    data = json.load(open(path))
+FileNotFoundError: [Errno 2] No such file or directory: 'checkpoints/coco_train_1_mask_0/overall*.json'

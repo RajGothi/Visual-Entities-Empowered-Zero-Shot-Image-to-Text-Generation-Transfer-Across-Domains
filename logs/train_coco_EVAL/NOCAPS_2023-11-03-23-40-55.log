@@ -1,0 +1,157 @@
+args: {'device': 'cuda:0', 'clip_model': 'ViT-B/32', 'language_model': 'gpt2', 'continuous_prompt_length': 10, 'clip_project_length': 10, 'temperature': 0.01, 'top_k': 3, 'threshold': 0.2, 'using_image_features': True, 'name_of_datasets': 'nocaps', 'path_of_val_datasets': './annotations/nocaps/nocaps_corpus.json', 'disable_all_entities': False, 'name_of_entities_text': 'vinvl_vgoi_entities', 'prompt_ensemble': True, 'weight_path': 'checkpoints/train_coco/coco_prefix-0014.pt', 'image_folder': './annotations/nocaps/', 'out_path': 'checkpoints/train_coco', 'using_hard_prompt': True, 'soft_prompt_first': True, 'only_hard_prompt': False, 'using_greedy_search': False, 'beam_width': 5, 'debug': False, 'text_prompt': None}
+
+Traceback (most recent call last):
+  File "/raid/speech/rajgothi/Project/ViECap/validation.py", line 265, in <module>
+    main(args)
+  File "/raid/speech/rajgothi/anaconda3/envs/dgx/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/raid/speech/rajgothi/Project/ViECap/validation.py", line 217, in main
+    model.load_state_dict(torch.load(args.weight_path, map_location = device))
+  File "/raid/speech/rajgothi/anaconda3/envs/dgx/lib/python3.10/site-packages/torch/nn/modules/module.py", line 2041, in load_state_dict
+    raise RuntimeError('Error(s) in loading state_dict for {}:\n\t{}'.format(
+RuntimeError: Error(s) in loading state_dict for ClipCaptionModel:
+	Unexpected key(s) in state_dict: "gpt.transformer.h.0.attn.bias", "gpt.transformer.h.0.attn.masked_bias", "gpt.transformer.h.1.attn.bias", "gpt.transformer.h.1.attn.masked_bias", "gpt.transformer.h.2.attn.bias", "gpt.transformer.h.2.attn.masked_bias", "gpt.transformer.h.3.attn.bias", "gpt.transformer.h.3.attn.masked_bias", "gpt.transformer.h.4.attn.bias", "gpt.transformer.h.4.attn.masked_bias", "gpt.transformer.h.5.attn.bias", "gpt.transformer.h.5.attn.masked_bias", "gpt.transformer.h.6.attn.bias", "gpt.transformer.h.6.attn.masked_bias", "gpt.transformer.h.7.attn.bias", "gpt.transformer.h.7.attn.masked_bias", "gpt.transformer.h.8.attn.bias", "gpt.transformer.h.8.attn.masked_bias", "gpt.transformer.h.9.attn.bias", "gpt.transformer.h.9.attn.masked_bias", "gpt.transformer.h.10.attn.bias", "gpt.transformer.h.10.attn.masked_bias", "gpt.transformer.h.11.attn.bias", "gpt.transformer.h.11.attn.masked_bias". 
+PTBTokenizer tokenized 56481 tokens at 375255.57 tokens per second.
+PTBTokenizer tokenized 5126 tokens at 67507.17 tokens per second.
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.nustaq.serialization.FSTClazzInfo (file:/raid/speech/rajgothi/Project/ViECap/evaluation/pycocoevalcap/spice/lib/fst-2.47.jar) to field java.lang.String.value
+WARNING: Please consider reporting this to the maintainers of org.nustaq.serialization.FSTClazzInfo
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+Parsing reference captions
+Parsing test captions
+Warning: Nashorn engine is planned to be removed from a future JDK release
+SPICE evaluation took: 1.600 s
+tokenization...
+setting up scorers...
+computing Bleu score...
+{'testlen': 4292, 'reflen': 4230, 'guess': [4292, 3875, 3458, 3041], 'correct': [3097, 1595, 757, 354]}
+ratio: 1.0146572104016514
+Bleu_1: 0.722
+Bleu_2: 0.545
+Bleu_3: 0.402
+Bleu_4: 0.295
+computing METEOR score...
+METEOR: 0.231
+computing Rouge score...
+ROUGE_L: 0.499
+computing CIDEr score...
+CIDEr: 0.611
+computing SPICE score...
+SPICE: 0.104
+Bleu_1: 0.722
+Bleu_2: 0.545
+Bleu_3: 0.402
+Bleu_4: 0.295
+METEOR: 0.231
+ROUGE_L: 0.499
+CIDEr: 0.611
+SPICE: 0.104
+PTBTokenizer tokenized 359390 tokens at 1364841.55 tokens per second.
+PTBTokenizer tokenized 32392 tokens at 292635.28 tokens per second.
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.nustaq.serialization.FSTClazzInfo (file:/raid/speech/rajgothi/Project/ViECap/evaluation/pycocoevalcap/spice/lib/fst-2.47.jar) to field java.lang.String.value
+WARNING: Please consider reporting this to the maintainers of org.nustaq.serialization.FSTClazzInfo
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+Parsing reference captions
+Parsing test captions
+Warning: Nashorn engine is planned to be removed from a future JDK release
+SPICE evaluation took: 5.098 s
+tokenization...
+setting up scorers...
+computing Bleu score...
+{'testlen': 27033, 'reflen': 26775, 'guess': [27033, 24363, 21693, 19023], 'correct': [19566, 9926, 4383, 1900]}
+ratio: 1.009635854341699
+Bleu_1: 0.724
+Bleu_2: 0.543
+Bleu_3: 0.391
+Bleu_4: 0.278
+computing METEOR score...
+METEOR: 0.227
+computing Rouge score...
+ROUGE_L: 0.496
+computing CIDEr score...
+CIDEr: 0.643
+computing SPICE score...
+SPICE: 0.099
+Bleu_1: 0.724
+Bleu_2: 0.543
+Bleu_3: 0.391
+Bleu_4: 0.278
+METEOR: 0.227
+ROUGE_L: 0.496
+CIDEr: 0.643
+SPICE: 0.099
+PTBTokenizer tokenized 179060 tokens at 904810.10 tokens per second.
+PTBTokenizer tokenized 16873 tokens at 172641.28 tokens per second.
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.nustaq.serialization.FSTClazzInfo (file:/raid/speech/rajgothi/Project/ViECap/evaluation/pycocoevalcap/spice/lib/fst-2.47.jar) to field java.lang.String.value
+WARNING: Please consider reporting this to the maintainers of org.nustaq.serialization.FSTClazzInfo
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+Parsing reference captions
+Parsing test captions
+Warning: Nashorn engine is planned to be removed from a future JDK release
+SPICE evaluation took: 2.928 s
+tokenization...
+setting up scorers...
+computing Bleu score...
+{'testlen': 14006, 'reflen': 13767, 'guess': [14006, 12593, 11180, 9767], 'correct': [9448, 4075, 1415, 463]}
+ratio: 1.0173603544707621
+Bleu_1: 0.675
+Bleu_2: 0.467
+Bleu_3: 0.302
+Bleu_4: 0.190
+computing METEOR score...
+METEOR: 0.198
+computing Rouge score...
+ROUGE_L: 0.454
+computing CIDEr score...
+CIDEr: 0.650
+computing SPICE score...
+SPICE: 0.086
+Bleu_1: 0.675
+Bleu_2: 0.467
+Bleu_3: 0.302
+Bleu_4: 0.190
+METEOR: 0.198
+ROUGE_L: 0.454
+CIDEr: 0.650
+SPICE: 0.086
+PTBTokenizer tokenized 594933 tokens at 1533558.36 tokens per second.
+PTBTokenizer tokenized 54393 tokens at 409321.31 tokens per second.
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.nustaq.serialization.FSTClazzInfo (file:/raid/speech/rajgothi/Project/ViECap/evaluation/pycocoevalcap/spice/lib/fst-2.47.jar) to field java.lang.String.value
+WARNING: Please consider reporting this to the maintainers of org.nustaq.serialization.FSTClazzInfo
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+Parsing reference captions
+Parsing test captions
+Warning: Nashorn engine is planned to be removed from a future JDK release
+SPICE evaluation took: 8.671 s
+tokenization...
+setting up scorers...
+computing Bleu score...
+{'testlen': 45331, 'reflen': 44772, 'guess': [45331, 40831, 36331, 31831], 'correct': [32111, 15596, 6555, 2717]}
+ratio: 1.0124854819976545
+Bleu_1: 0.708
+Bleu_2: 0.520
+Bleu_3: 0.365
+Bleu_4: 0.254
+computing METEOR score...
+METEOR: 0.219
+computing Rouge score...
+ROUGE_L: 0.483
+computing CIDEr score...
+CIDEr: 0.662
+computing SPICE score...
+SPICE: 0.095
+Bleu_1: 0.708
+Bleu_2: 0.520
+Bleu_3: 0.365
+Bleu_4: 0.254
+METEOR: 0.219
+ROUGE_L: 0.483
+CIDEr: 0.662
+SPICE: 0.095

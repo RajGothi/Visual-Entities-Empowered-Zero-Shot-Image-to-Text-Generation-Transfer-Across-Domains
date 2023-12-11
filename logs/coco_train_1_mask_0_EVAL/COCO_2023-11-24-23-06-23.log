@@ -1,0 +1,20 @@
+args: {'device': 'cuda:0', 'clip_model': 'ViT-B/32', 'language_model': 'gpt2', 'continuous_prompt_length': 10, 'clip_project_length': 10, 'temperature': 0.01, 'top_k': 3, 'threshold': 0.4, 'using_image_features': True, 'name_of_datasets': 'coco', 'path_of_val_datasets': './annotations/coco/test_captions.json', 'disable_all_entities': False, 'name_of_entities_text': 'coco_entities', 'prompt_ensemble': True, 'weight_path': 'checkpoints/coco_train_1_mask_0/coco_prefix-0014.pt', 'image_folder': './annotations/coco/val2014/', 'out_path': 'checkpoints/coco_train_1_mask_0', 'using_hard_prompt': True, 'soft_prompt_first': True, 'only_hard_prompt': False, 'using_greedy_search': False, 'beam_width': 5, 'debug': False, 'text_prompt': None}
+
+Traceback (most recent call last):
+  File "/raid/speech/rajgothi/Project/Transformer/Project/Code/validation.py", line 265, in <module>
+    main(args)
+  File "/raid/speech/rajgothi/anaconda3/envs/dgx/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/raid/speech/rajgothi/Project/Transformer/Project/Code/validation.py", line 187, in main
+    entities_text = load_entities_text(args.name_of_entities_text, '../annotations/vocabulary/coco_categories.json', not args.disable_all_entities)
+  File "/raid/speech/rajgothi/Project/Transformer/Project/Code/utils/load_annotations.py", line 166, in load_entities_text
+    return load_coco_entities(path_of_entities, all_entities)
+  File "/raid/speech/rajgothi/Project/Transformer/Project/Code/utils/load_annotations.py", line 94, in load_coco_entities
+    with open(path, 'r') as infile:
+FileNotFoundError: [Errno 2] No such file or directory: '../annotations/vocabulary/coco_categories.json'
+Traceback (most recent call last):
+  File "/raid/speech/rajgothi/Project/Transformer/Project/evaluation/cocoeval.py", line 15, in <module>
+    cocoEval = COCOEvalCap(args.result_file_path)
+  File "/raid/speech/rajgothi/Project/Transformer/Project/evaluation/pycocoevalcap/eval.py", line 17, in __init__
+    data = json.load(open(path))
+FileNotFoundError: [Errno 2] No such file or directory: 'checkpoints/coco_train_1_mask_0/coco*.json'
