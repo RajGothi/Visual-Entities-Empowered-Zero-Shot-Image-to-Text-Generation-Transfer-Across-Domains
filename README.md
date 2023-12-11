@@ -68,31 +68,9 @@ bash eval_coco.sh coco_train_1 0 '' 14
 bash eval_flickr30k.sh flicker30K_1 0 '' 29
 ```
 
-
-
-PPT Link: https://docs.google.com/presentation/d/1MY__ajJE0VolzEsR9XVgSn5Dtjhx1VWo4irGBco-WsY/edit#slide=id.g28910898772_1_38
-
-If Checkpoints are needed to run the inference, We can share it privately.
-
-Scripts folder help to train the model and Validation on dataset using bash script.
-
-Code/Notebook folder contain the inference file that can be infer on one instance.
-
-Code/Utils have general functionality function that frequently used by other codes.
-
-Code/Feature Extraction folder contain the code that help to extract the text and image features from the CLIP model.
-
-Code/Model contains the model architecture that we used for our approach.
-
-Train and validation py files are present in the Code folder.
-
-Logs folder contain the logs of experiments after running it.
-
-annotations folder contain the downlaoded all dataset information, It's too large files. (We could not able to share in Git/Moodle.)  (If needed then we can share privately.)
-
-checkpoints folder contain the checkpoints of each indiviual experiments that we have run generated captions of those experiments.
-
-Evaluation folder is cloned from the standard MS COCO git repo, which widely used in Captioning task for the evaluation. 
-Please clone this git repo. (https://github.com/tylin/coco-caption)
-
-Latest Readme can be find at (https://github.com/RajGothi/GNR-650/tree/main/Project)
+# Other:
+- PPT Link: https://docs.google.com/presentation/d/1MY__ajJE0VolzEsR9XVgSn5Dtjhx1VWo4irGBco-WsY/edit#slide=id.g28910898772_1_38
+- If checkpoints are required to run the inference, I can share them privately.(Email me on rajgothi9@gmail.com)
+- The 'logs' folder contains the experiment logs generated after running.
+- The 'annotations' folder holds all the downloaded dataset information, which consists of large files. If necessary, I can share this information privately.
+- The 'checkpoints' folder includes checkpoints from each individual experiment, which have generated captions.
