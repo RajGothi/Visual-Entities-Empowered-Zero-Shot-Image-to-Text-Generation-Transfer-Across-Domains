@@ -34,13 +34,20 @@ python CLIP_images_features_extraction.py
 
 ```bash
 cd Code/utils/
-python prompt_ensemble.py.py
+python prompt_ensemble.py
 ```
 
 ### Trainig:
 
-### Inference:
+```bash
+cd scripts/
+bash train_coco.sh 0
+bash train_flickr30k.sh 0
+```
+where 0 represent the GPU number.
 
+### Inference:
+To run the model on single image, you can use [Notebook](Code/Notebook/inference.ipynb):
 
 
 
