@@ -1,8 +1,3 @@
-Name: 
-
-Raj Gothi, 22M2160
-Sarvesh Gharat, 22D1593
-
 Project Title: Visual Entities Empowered Zero-Shot Image-to-Text Generation Transfer Across Domains
 
 PPT Link: https://docs.google.com/presentation/d/1MY__ajJE0VolzEsR9XVgSn5Dtjhx1VWo4irGBco-WsY/edit#slide=id.g28910898772_1_38
