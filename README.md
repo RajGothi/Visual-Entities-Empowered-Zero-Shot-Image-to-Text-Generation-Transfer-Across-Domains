@@ -2,7 +2,7 @@
 
 ## Problem statement:
 
-  ## Method:
+### Method:
 
 ## Results:
 
