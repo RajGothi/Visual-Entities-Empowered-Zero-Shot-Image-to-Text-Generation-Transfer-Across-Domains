@@ -9,9 +9,8 @@
 ### Method:
 ![method](Other/method-ss.png)
 
-### Results:
-
 ### Analysis:
+![method](Other/analysis.png)
 
 # Code:
 
