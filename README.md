@@ -54,7 +54,8 @@ where 0 represent the GPU number.
 To run the model on single image, you can use [Notebook](Code/Notebook/inference.ipynb)
 
 ### Evaluation:
-**Cross-Domain**
+
+- Cross-Domain
 ```bash
 bash eval_nocaps.sh coco_train_1 0 '--top_k 3 --threshold 0.2' 14
 ```
