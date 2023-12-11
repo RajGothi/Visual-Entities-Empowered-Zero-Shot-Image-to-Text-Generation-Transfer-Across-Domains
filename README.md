@@ -8,6 +8,10 @@
 
 ### Method:
 ![method](Other/method-ss.png)
+- Training: With text-only corpus, nouns are extracted from the sentence by a grammar parser to construct the hard prompt. Then, the soft prompt encodes the overall contexts of the sentence by CLIP text encoder.
+- Inference: CLIP Image encoding pass to projector which gives soft prompt, along with that CLIP-based entity classifier to construct the entity-aware hard prompt. With the strong transferability from the training-agnostic hard prompt.
+
+
 
 ### Analysis:
 ![method](Other/analysis.png)
@@ -37,7 +41,7 @@ cd Code/utils/
 python prompt_ensemble.py
 ```
 
-### Trainig:
+### Training:
 
 ```bash
 cd scripts/
@@ -47,8 +51,13 @@ bash train_flickr30k.sh 0
 where 0 represent the GPU number.
 
 ### Inference:
-To run the model on single image, you can use [Notebook](Code/Notebook/inference.ipynb):
+To run the model on single image, you can use [Notebook](Code/Notebook/inference.ipynb)
 
+### Evaluation:
+**Cross-Domain**
+```bash
+bash eval_nocaps.sh coco_train_1 0 '--top_k 3 --threshold 0.2' 14
+```
 
 
 
