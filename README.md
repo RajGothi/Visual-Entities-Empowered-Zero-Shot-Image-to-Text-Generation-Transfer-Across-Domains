@@ -2,7 +2,7 @@
 
 ### Problem statement:
 - Given an image I, the goal is to generate a textual description using a pre-trained Vision-Language Model (VLM) while leveraging real-world knowledge from a Large Language Model (LLM). 
-- The primary focus is on addressing challenges related to modality bias and object hallucination.
+- The primary focus is on addressing challenges related to *modality bias* and *object hallucination*.
 
 ![Problem](Other/ps-ss.png)
 
