@@ -1,4 +1,23 @@
-Project Title: Visual Entities Empowered Zero-Shot Image-to-Text Generation Transfer Across Domains
+# Visual Entities Empowered Zero-Shot Image-to-Text Generation Transfer Across Domains
+
+### Problem statement:
+- Given an image I, the goal is to generate a textual description using a pre-trained Vision-Language Model (VLM) while leveraging real-world knowledge from a Large Language Model (LLM). 
+- The primary focus is on addressing challenges related to modality bias and object hallucination.
+
+![Problem](Other/problem_statement.png)
+
+### Method:
+![method](Other/method.png)
+
+### Results:
+
+### Analysis:
+
+# Code:
+
+### requirements:
+
+### Run
 
 PPT Link: https://docs.google.com/presentation/d/1MY__ajJE0VolzEsR9XVgSn5Dtjhx1VWo4irGBco-WsY/edit#slide=id.g28910898772_1_38
 
