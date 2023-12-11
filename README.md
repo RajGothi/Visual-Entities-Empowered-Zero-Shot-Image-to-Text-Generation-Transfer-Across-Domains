@@ -1,14 +1,14 @@
 # Visual Entities Empowered Zero-Shot Image-to-Text Generation Transfer Across Domains
 
-## Problem statement:
+### Problem statement:
 
 ### Method:
 
-## Results:
+### Results:
 
-## Analysis:
+### Analysis:
 
-## Code:
+# Code:
 
 
 PPT Link: https://docs.google.com/presentation/d/1MY__ajJE0VolzEsR9XVgSn5Dtjhx1VWo4irGBco-WsY/edit#slide=id.g28910898772_1_38
