@@ -14,14 +14,37 @@
 
 # Code:
 
-### requirements:
+### Requirements:
 ```bash
 pip install .
 git clone https://github.com/tylin/coco-caption
 ```
 
+### Data Preparation:
+```bash
+cd Code/utils/
+python get_entities.py
+```
 
-### Run
+```bash
+cd Code/Feature_Extraction/
+python CLIP_texts_features_extraction.py
+python CLIP_images_features_extraction.py
+```
+
+```bash
+cd Code/utils/
+python prompt_ensemble.py.py
+```
+
+### Trainig:
+
+### Inference:
+
+
+
+
+
 
 PPT Link: https://docs.google.com/presentation/d/1MY__ajJE0VolzEsR9XVgSn5Dtjhx1VWo4irGBco-WsY/edit#slide=id.g28910898772_1_38
 
