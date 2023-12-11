@@ -68,9 +68,8 @@ bash eval_coco.sh coco_train_1 0 '' 14
 bash eval_flickr30k.sh flicker30K_1 0 '' 29
 ```
 
-# Other:
-- PPT Link: https://docs.google.com/presentation/d/1MY__ajJE0VolzEsR9XVgSn5Dtjhx1VWo4irGBco-WsY/edit#slide=id.g28910898772_1_38
+### Other:
+- Project PPT Link: https://docs.google.com/presentation/d/1MY__ajJE0VolzEsR9XVgSn5Dtjhx1VWo4irGBco-WsY/edit#slide=id.g28910898772_1_38
 - If checkpoints are required to run the inference, I can share them privately.(Email me on rajgothi9@gmail.com)
 - The 'logs' folder contains the experiment logs generated after running.
-- The 'annotations' folder holds all the downloaded dataset information, which consists of large files. If necessary, I can share this information privately.
-- The 'checkpoints' folder includes checkpoints from each individual experiment, which have generated captions.
+- The 'checkpoints' folder includes checkpoints from each individual experiment and generated captions.
